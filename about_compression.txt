@@ -29,4 +29,9 @@ C = 01000011
 - size of tar; du -h dir_name
 -to compress tar file: tar -c dir_name/ | gz -c >dir_name.tar.gz
 - One line version for compression: tar -cvzf D_melanogaster_compressed.tar.gz D_melanogaster_genome
-	  
+
+- Super fast compression that is supper well but takes up entire machine so dont use when computer is busy and can only be used on .xz files
+- tar -c Dm_genome | xz -T0 > D_melangaster_compressed.tar.xz 
+
+-You can do almost all operations on a compressed file and you don't need to uncompress it to do operations 
+
