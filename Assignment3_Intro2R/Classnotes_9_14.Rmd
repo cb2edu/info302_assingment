@@ -1,0 +1,75 @@
+---
+title: "INFO302_classnotes"
+author: "Meghan Moody"
+date: "9/14/2021"
+output: html_notebook
+---
+# R Enviorment 
+
+- ctrl+alt+i inserts an R code block 
+
+- if you want to write in another language in the curly bracket  do {r engine= "selected language"}
+
+- everything is a function in R
+```{r}
+getwd()
+setwd("/home/mmeghan")
+getwd()
+
+a <- 2
+testfunction <- function() {
+  x <- rnorm(100)
+  mean(x)
+}
+testfunction()
+
+```
+
+# Getting Help
+
+- in Unix there is a command called man 
+
+- for R you add a question mark to the funciton 
+```{r}
+?getwd()
+
+```
+- CRAN website has tutorals for the packages 
+
+- Biocondunctor has bunch of information on how to install packages and how they work
+
+- Package Vignettes are tutorials 
+
+
+#Install Packages 
+
+- The install.packages() only installs packages from CRAN
+
+- With the install of Bio C Manager, packages from Bioconductor can be downloaded on command 
+
+- R packages can also download data 
+
+```{r}
+install.packages("BiocManager")
+
+```
+- once a package is installed there are two ways to use the package 
+- In R to call a function from a specific package is called "namespace"
+- Like in java to call a function of an object you would do Object.function()
+-For R to call a function from a specified package there are two ways
+  
+
+```{r}
+#Method 1
+library(BiocManager)
+install()
+#Method 2 
+#Going forward use this method
+BiocManager::install("ggplot2")
+library(ggplot2)
+```
+
+- By default packages are dowloaded in ~/R
+
+
+

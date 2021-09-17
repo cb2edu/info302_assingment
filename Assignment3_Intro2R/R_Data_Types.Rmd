@@ -1,0 +1,80 @@
+---
+title: "INFO302_classnotes 9/16"
+author: "Meghan Moody"
+date: "9/16/2021"
+output: html_document
+---
+
+# R as a Programming Language 
+
+## Data Types: 
+
+### Vectors 
+- you can not mix and match data types in vectors
+```{r}
+a <- c(1,2,3)
+a1 <- c(1.0, 2.0, 3.0)
+b <- c("a", "b", "c")
+c <- c(TRUE, FALSE, TRUE)
+d <- c(1, "a", TRUE)
+class(a)
+class(a1)
+class(b)
+class(c)
+class(d)
+d
+
+x <- 2
+as.character(x)
+
+f <- as.factor(c())
+
+```
+
+```{r}
+a <- c('a', 'b', 'c')
+a[1:2]
+length(a)
+for (i in 1:length(a)){
+  cat(paste(a[i], "\n"))
+}
+a[1] <- "z"
+a
+```
+###Lists 
+- can have a mixmatch of data types and can have nexted list 
+```{r}
+l <- list()
+l[[1]] <- 1
+l[[2]] <- 2 
+l[[3]] <- "a"
+l
+
+
+```
+- hash structure of list 
+```{r}
+l1 <- list(a="First", b=2, c=TRUE)
+l1[[1]]
+l1[['a']]
+```
+- NA has a specific meaning that there is nothing there like NULL
+
+```{r}
+na_v <- c(1,2,NA,3)
+```
+
+##Data Structures:
+###Data Frames
+
+-like a table with columns and rows 
+
+```{r}
+
+```
+
+
+
+
+
+
