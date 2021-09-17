@@ -1,0 +1,37 @@
+-binary = 0,1
+-arabic numerals = decimal system  = 0 ... 9 
+-there are only two states for a compter: on or off -> 0 or 1 
+-minimum number of bits required  to represent entire english character= 8 
+A = 01000001
+B = 01000010
+C = 01000011
+-computer takes txt file takes 8 bits chuncks and changes to to something you can see on the screen
+-if binary files the computer does not break the binary code into 8 bit chunks
+-8 bit can represent 256 unique characters
+-0-128 = ASCII
+-129-259 = Latin I
+-UTF 16 to include the charcters of Indian and Oceanan characters languages (16 byte)
+-UTF 32 bit to incluce characters of chinese language and can represent any human language character and emojis 
+
+-the phrase "AAATTCC" is of size 56 bites or 7 bytes 
+-to compress "AAATTCC" it can be saved as "A3T2C2" and that only requires 6 bytes and is called runtime encoding 
+-You can make "AAATTCC" even smaller it can be compresses by saving it into a lower grit version and since there are only three unique characters we only need 2 bits to represnt all the characters. A= 00 T=01 C=10 and we have extra 11. And would have size 2bits x 7 characters  = 14 bits
+-To compress more A=0 (1bit) T= 01 (2bits) C=10(2 bits) so the phrase "AAATTCC" would have size 1+1+1 + 2^2 = 11 bits
+-The more entropy (complex file) the further it can be compressed becuaswe if if was "AATTCC" then all the characters would be represented the same amout and one of them couldn't be represented differently as one bit 
+- 3 software to compress:
+	> gzip     (Fastest but not as compressed) 
+	>bzip2
+	>xz        (best compression but takes long time)
+-Compression is done on file only for linux
+-To put  a directory into one file the program tar is used 
+	> tar -c dir_name/ >dir_name.tar
+-to check if directory is put into a file: tar -f dir_name.tar
+- size of tar; du -h dir_name
+-to compress tar file: tar -c dir_name/ | gz -c >dir_name.tar.gz
+- One line version for compression: tar -cvzf D_melanogaster_compressed.tar.gz D_melanogaster_genome
+
+- Super fast compression that is supper well but takes up entire machine so dont use when computer is busy and can only be used on .xz files
+- tar -c Dm_genome | xz -T0 > D_melangaster_compressed.tar.xz 
+
+-You can do almost all operations on a compressed file and you don't need to uncompress it to do operations 
+
