@@ -1,0 +1,119 @@
+---
+title: "R Notebook"
+author: "Meghan Moody"
+output: html_notebook
+---
+
+# R as a Programming Language 
+
+## Data Types: 
+
+### Vectors 
+- you can not mix and match data types in vectors
+```{r}
+a <- c(1,2,3)
+a1 <- c(1.0, 2.0, 3.0)
+b <- c("a", "b", "c")
+c <- c(TRUE, FALSE, TRUE)
+d <- c(1, "a", TRUE)
+class(a)
+class(a1)
+class(b)
+class(c)
+class(d)
+d
+
+x <- 2
+as.character(x)
+
+f <- as.factor(c())
+
+```
+```{r}
+a <- c('a', 'b', 'c')
+a[1:2]
+length(a)
+for (i in 1:length(a)){
+  cat(paste(a[i], "\n"))
+}
+a[1] <- "z"
+a
+```
+###Lists 
+- can have a mixmatch of data types and can have nexted list 
+```{r}
+l <- list()
+l[[1]] <- 1
+l[[2]] <- 2 
+l[[3]] <- "a"
+l
+```
+- hash structure of list 
+```{r}
+l1 <- list(a="First", b=2, c=TRUE)
+l1[[1]]
+l1[['a']]
+```
+- NA has a specific meaning that there is nothing there like NULL
+
+```{r}
+na_v <- c(1,2,NA,3)
+```
+
+##Data Structures:
+###Data Frames
+
+-like a table with columns and rows 
+-str gives an broad overview of what the data looks like
+```{r}
+data(iris)
+str(iris)
+View(iris)
+dim(iris)
+dim(iris)[1]
+head(iris)
+table(iris)
+iris[,1]
+names(iris)
+iris$Sepal.Length
+names(iris) <- c("a", "b", "c", "d", "e")
+names(iris)
+iris$a
+data("iris")
+table(iris$Species)
+summary(iris)
+```
+### CVS and TSV files
+
+-save the sample iris data to my directory called my_iris
+```{r}
+write.table(iris, file = "my_iris.tsv", quote = F, row.names = F, sep = "\t")
+
+```
+
+```{r}
+my_iris <- read.table("my_iris.tsv")
+names(my_iris) <- my_iris[1, ]
+my_iris <- my_iris[-1, ]
+View(my_iris)
+```
+- The above black can be simplied down to 
+```{r}
+my_iris <- read.table("my_iris.tsv")
+View(my_iris)
+```
+
+## Ploting in R 
+
+-the most common ploting function in base R is plot 
+
+```{r}
+plot(my_iris$Sepal.Length, my_iris$Sepal.Width, xlab = "Sepal Length", ylab = "Sepal Width", main = "My Great Plot")
+```
+
+- ggplot is the popular version to use now 
+```{r}
+library(ggplot2)
+ggplot(my_iris, aes(x=Sepal.Length, y=Sepal.Width)) + geom_point() + xlab("Sepal Length") + ylab("Sepal Width")
+```
+
