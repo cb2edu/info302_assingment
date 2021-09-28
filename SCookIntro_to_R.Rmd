@@ -1,0 +1,561 @@
+---
+title: "Intro to R"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+file.create("source_test_R.")
+```
+
+```{r}
+myFunction <- function() {
+  x <- rnorm(100)
+  mean(x)
+}
+myFunction()
+```
+
+```{r}
+x <- 1:20
+x
+```
+```{r}
+y <- vector()
+z <- c(1, 2, 3)
+a <- 1:10
+b <- seq(1, 10, by = 1)
+```
+
+
+```{r}
+x
+x[3]
+x[-1]
+
+```
+
+
+```{r}
+x
+x[2] <- 0; x
+x <- c(1, 2); y <- c(2, 4)
+z <- c(x, y)
+z
+```
+
+
+```{r}
+x <- 0:6
+as.numeric(x)
+as.logical(x)
+as.character(x)
+as.complex(x)
+```
+
+
+```{r}
+x <- list()
+x <- list("a" = 2.5, "b" = TRUE, "c" = 1:3)
+x
+typeof(x)
+length(x)
+
+```
+
+
+```{r}
+x$a
+x[c(1:2)]
+x[["b"]]
+```
+
+
+```{r}
+x[["d"]] <- 25
+x
+
+```
+
+
+```{r}
+
+m <- matrix(1:6, nrow = 2, ncol = 3)
+m <- 1:10
+dim(m) <- c(2,5)
+m
+```
+
+
+```{r}
+
+x <- 1:3
+y <- 10: 12
+cbind(x, y)
+rbind(x, y)
+```
+
+
+```{r}
+x <- factor(c("yes", "yes", "no"))
+```
+
+
+```{r}
+table(x)
+```
+
+```{r}
+unclass(x)
+```
+
+
+```{r}
+x <- factor(c("yes", "no"), levels = c("Yes", "no"))
+```
+
+
+```{r}
+x <- c(1, 2, NA, 10, 3)
+is.na(x)
+is.nan(x)
+x <- c(1, 2, NaN, NA, 4)
+is.na(x)
+is.nan(x)
+```
+
+
+```{r}
+x <- data.frame(foo = 1:4, bar = c(T, T, F, F))
+x
+nrow(x)
+ncol(x)
+```
+
+
+```{r}
+data("iris")
+head("iris")
+write.table("iris", "iris.txt", quote = F)
+dir()
+test_data <- read.table("iris.txt", header = T)
+head(test_data)
+```
+
+
+```{r eval=FALSE}
+d <- read.table(gzfile("myzipped.gz"))
+```
+
+
+```{r}
+m <- matrix(1:4, nrow = 2, ncol = 2)
+dimnames(m) <- list(c("a", "b"), c("c", "d"))
+m
+d <- data.frame(c(1, 2, 3), c(4, 5, 6))
+d
+names(d) <- c("A","B")
+d
+
+```
+
+
+```{r}
+x <- c("a", "b", "c")
+x[1]
+x[2]
+x[1:3]
+x[-2]
+
+
+x[x > "a"]
+u <- x > "a"
+u
+x[u]
+```
+
+
+```{r}
+x <- list(foo = 1:4, bar = 0.6)
+x[1]
+x[[1]]
+x$bar
+x[["bar"]]
+x["bar"]
+
+
+```
+
+
+```{r}
+x <- c(1, 2, NA, 4, NA, 5)
+bad <- is.na(x)
+x[!bad]
+
+```
+
+
+```{r}
+x <- matrix(1:6, 2, 3)
+x
+x[1,2]
+x[2,1]
+
+```
+
+
+```{r}
+x[1,]
+x[,2]
+
+```
+
+
+```{r}
+x <- data.frame(c(1:3), c(4:6))
+names(x) <- c("A","B")
+x
+x$A
+
+
+
+```
+
+
+```{r}
+x <- 1:4; y <- 6:9
+x + y
+x - y
+x * y
+x / y
+```
+
+
+```{r}
+m1 <- matrix(1:4, 2, 2)
+m1
+m1 * m1
+m1 %*% m1
+```
+
+
+```{r fig.cap=""}
+mydunction <- function() {
+  cat("Hello world\n");
+  
+}
+
+```
+
+
+```{r fig.cap=""}
+for (i in 1:3) {
+  if(i > 1) {
+    cat("I said hello", i, "times\n")
+  }else {
+    cat("I said hello", i, "times\n")  
+    
+    }
+}
+
+
+
+
+```
+
+
+```{r eval=FALSE}
+fh <- file(inputfile, open ="r" )
+while (length(line <- readLines(fh, n=1, warn= FALSE)) > 0) {
+  
+  }
+close(fh)
+```
+
+
+```{r}
+text <- "gi|123456|ref|ABCDEFG" # Text to search
+p <- "gi\\|(\\d+)\\|ref\\|(\\S+)" # Extract gi and acc
+m <- regexec(p, text, perl = TRUE) # Find match and extract
+s <- regmatches(text, m) # Extract the substring
+s[[1]][2] # Print GI
+s[[1]][3] # Print accession
+```
+
+
+```{r}
+x<-rnorm(50)
+mean(x)
+sd(x)
+var(x)
+median(x)
+sum(x)
+```
+
+
+```{r}
+data(airquality)
+mean(airquality$Ozone)
+mean(airquality$Ozone,na.rm=T)
+```
+
+
+```{r}
+summary(airquality)
+```
+
+
+```{r}
+x<- rnorm(10)
+x
+```
+
+
+```{r}
+x<-rnorm(10, mean=5, sd=2)
+x
+```
+
+
+```{r fig.show='asis', fig.cap=""}
+data(iris)
+plot(iris)
+```
+
+
+```{r fig.show='asis',fig.cap=""}
+x<-runif(50,0,2) # create a vector from uniform distribution
+y<-runif (50,0,2) # create another one
+plot(x,y, main="Main title",sub="subtitle",xlab="x-label", ylab="y-label")
+abline(h=0.6,v=0.6)
+```
+
+
+```{r fig.cap="",fig.show='asis'}
+plot(1,1)
+for (side in 0:3) mtext (0:3,side=side,at=0.7,line=0:3)
+mtext(paste("side",1:4),side=1:4,line = -1, font=2)
+```
+
+
+```{r fig.cap="",fig.show='asis'}
+plot (x, y, type="n", xlab="",ylab="", axes=F) # Draw an empty plot area
+points(x,y) # Draw point
+axis(1) # Draw the first axis
+axis(2, at=seq(0.2,1.8,0.2)) # Draw second axis with tick at specific scale
+box() # Draw the surrounding box
+title(main="Main title",xlab="x",ylab="y") # Write the main title and the labels
+legend("topleft",legend="Some random data",pch=16)
+```
+
+
+```{r fig.cap=""}
+data(airquality)
+pdf("airquality.pdf",width=8.5,height=11)
+plot(airquality)
+dev.off()
+```
+
+
+```{r fig.cap=""}
+data(airquality)
+par(mfrow=c(1,2))
+with(airquality, {plot(Wind,Ozone);plot(Temp,Wind)})
+```
+
+
+```{r}
+library(ggplot2)
+p1 <- ggplot(airquality, aes(x=Wind, y=Ozone)) +
+	geom_point()
+p2 <- ggplot(airquality, aes(x=Temp, y=Wind)) +
+	geom_point()
+suppressPackageStartupMessages(library(cowplot))
+combined_plot <- plot_grid(p1,p2,nrow=1)
+print(combined_plot)
+```
+
+
+```{r fig.cap="", fig.show='asis'}
+data("airquality")
+hist(airquality$Ozone)
+```
+
+
+```{r fig.cap="",fig.show='asis'}
+hist(airquality$Ozone, breaks=50)
+```
+
+
+```{r}
+library(ggplot2)
+g <- ggplot(data = airquality, aes(x=airquality$Ozone)) +
+	geom_histogram()
+g
+```
+
+
+```{r fig.cap="", fig.show='asis'}
+boxplot(airquality)
+```
+
+
+```{r}
+g <- ggplot(airquality, aes(x=as.factor(Month), y=Ozone)) +
+	geom_boxplot()
+g
+```
+
+
+```{r}
+library(tidyr)
+gathered_data <- gather(airquality)
+g <- ggplot(gathered_data, aes(x=key,y=value)) +
+	geom_boxplot()
+g
+```
+
+
+```{r fig.cap="", fig.show="asis"}
+data(mtcars)
+head(mtcars)
+counts<-table(mtcars$gear)
+barplot(counts, main="Car number of gear distribution", xlab="Number of gears")
+```
+
+
+```{r fig.cap="", fig.show="asis"}
+barplot(counts, main="Car distribution", horiz=T, names.arg=c("3 Gears", "4 Gears", "5 Gears"))
+```
+
+
+```{r fig.cap="", fig.show='asis'}
+counts<-table(mtcars$cyl, mtcars$gear)
+barplot(counts, main="Gear and cylinder", 
+		xlab="Number of gears", 
+		col=c("black","grey","white"),
+		legend=rownames(counts),beside=T)
+```
+
+
+```{r}
+g <- ggplot(mtcars, aes(x=factor(gear), fill=factor(cyl))) +
+	geom_bar(position=position_dodge())
+g
+```
+
+
+```{r fig.cap="",fig.show='asis'}
+## Generate some data
+heights<-vector() # Empty vector to hold the heights of the bar plot
+stddevs<-vector() # Empty vector to hold the standard deviations
+for (i in 1:3) {  # We will generate 3 sets of data
+	d<-rnorm(10, mean=5, sd =1) # Be sure that we have some positive data
+	heights[i]<-mean(d)
+	stddevs[i]<-sd(d)
+} 
+## Draw the barplot
+bp<-barplot(heights,names=c(1:3),ylim=c(0,8),space=1) # Returns a matrix
+mids<-bp[,1] # Get the midpoint
+for (i in 1:3) { # We will draw the errorbars 
+	arrows(x0=mids[i],y0=heights[i]-stddevs[i],
+		   x1=mids[i],y1=heights[i]+stddevs[i],
+		   code=3,angle=90)
+}
+```
+
+
+```{r}
+sample_data <- data.frame(heights=heights,
+						  sd=stddevs,
+						  names= c("class1","class2","class3"))
+g <- ggplot(sample_data,aes(x=names, y=heights)) +
+				geom_bar(stat="identity") +
+	geom_errorbar(aes(ymin=heights-sd,
+					  ymax=heights+sd, width=0.2))
+g
+```
+
+
+```{r}
+barplot(counts, main="Gear and cylinder", xlab="Number of gears", col=c("red","green","blue"),legend=rownames(counts),beside=T)
+```
+
+
+```{r fig.cap=""}
+library(RColorBrewer)
+display.brewer.all()
+```
+
+
+```{r fig.cap=""}
+nice<-brewer.pal(3,"Pastel2")
+barplot(counts, main="Gear and cylinder", xlab="Number of gears", col=nice,legend=rownames(counts),beside=T)
+```
+
+
+```{r}
+g <- ggplot(mtcars, aes(x=factor(gear),fill=factor(cyl))) +
+	geom_bar(position=position_dodge()) + 
+	labs(title = "Gear and cylinder", x="Number of gears",
+		 fill="Cylinders") +
+	scale_fill_brewer(palette = "Pastel2")
+	
+print(g)
+```
+
+
+```{r fig.cap=""}
+data(women)
+head(women)
+```
+
+
+```{r fig.cap=""}
+plot(women)
+```
+
+
+```{r fig.cap=""}
+l <- lm(women$weight~women$height)
+summary(l)
+```
+
+
+```{r fig.cap=""}
+plot(women$height,women$weight,main="Women height vs weight",xlab="Height",ylab="Weight")
+abline(l,lwd=2,col="red")
+```
+
+
+```{r fig.cap=""}
+s<-summary(l)
+s$adj.r.squared
+s$coefficients[2,4]
+```
+
+
+```{r fig.cap=""}
+s<-cor.test(women$weight,women$height,alternatives="tow.sided")
+s
+s$p.value
+s$estimate
+```
+
+
+
