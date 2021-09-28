@@ -227,37 +227,89 @@ pre code {
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKDEsMiwzKVxuYTEgPC0gYygxLjAsIDIuMCwgMy4wKVxuYiA8LSBjKFwiYVwiLCBcImJcIiwgXCJjXCIpXG5jIDwtIGMoVFJVRSwgRkFMU0UsIFRSVUUpXG5kIDwtIGMoMSwgXCJhXCIsIFRSVUUpXG5jbGFzcyhhKVxuY2xhc3MoYTEpXG5jbGFzcyhiKVxuY2xhc3MoYylcbmNsYXNzKGQpXG5kXG5cbnggPC0gMlxuYXMuY2hhcmFjdGVyKHgpXG5cbmYgPC0gYXMuZmFjdG9yKGMoKSlcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKDEsMiwzKVxuYTEgPC0gYygxLjAsIDIuMCwgMy4wKVxuYiA8LSBjKFwiYVwiLCBcImJcIiwgXCJjXCIpXG5jIDwtIGMoVFJVRSwgRkFMU0UsIFRSVUUpXG5kIDwtIGMoMSwgXCJhXCIsIFRSVUUpXG5jbGFzcyhhKVxuYGBgIn0= -->
 <pre class="r"><code>a &lt;- c(1,2,3)
 a1 &lt;- c(1.0, 2.0, 3.0)
 b &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)
 c &lt;- c(TRUE, FALSE, TRUE)
 d &lt;- c(1, &quot;a&quot;, TRUE)
-class(a)
-class(a1)
-class(b)
-class(c)
-class(d)
-d
-
-x &lt;- 2
-as.character(x)
-
-f &lt;- as.factor(c())
-</code></pre>
+class(a)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTEpXG5gYGAifQ== -->
+<pre class="r"><code>class(a1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYilcbmBgYCJ9 -->
+<pre class="r"><code>class(b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYylcbmBgYCJ9 -->
+<pre class="r"><code>class(c)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibG9naWNhbFwiXG4ifQ== -->
+<pre><code>[1] &quot;logical&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoZClcbmBgYCJ9 -->
+<pre class="r"><code>class(d)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZFxuYGBgIn0= -->
+<pre class="r"><code>d</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMVwiICAgIFwiYVwiICAgIFwiVFJVRVwiXG4ifQ== -->
+<pre><code>[1] &quot;1&quot;    &quot;a&quot;    &quot;TRUE&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAyXG5hcy5jaGFyYWN0ZXIoeClcbmBgYCJ9 -->
+<pre class="r"><code>x &lt;- 2
+as.character(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMlwiXG4ifQ== -->
+<pre><code>[1] &quot;2&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZiA8LSBhcy5mYWN0b3IoYygpKVxuYGBgIn0= -->
+<pre class="r"><code>f &lt;- as.factor(c())</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKCdhJywgJ2InLCAnYycpXG5hWzE6Ml1cbmxlbmd0aChhKVxuZm9yIChpIGluIDE6bGVuZ3RoKGEpKXtcbiAgY2F0KHBhc3RlKGFbaV0sIFwiXFxuXCIpKVxufVxuYVsxXSA8LSBcInpcIlxuYVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBjKCdhJywgJ2InLCAnYycpXG5hWzE6Ml1cbmBgYCJ9 -->
 <pre class="r"><code>a &lt;- c('a', 'b', 'c')
-a[1:2]
-length(a)
-for (i in 1:length(a)){
+a[1:2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYVwiIFwiYlwiXG4ifQ== -->
+<pre><code>[1] &quot;a&quot; &quot;b&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVuZ3RoKGEpXG5gYGAifQ== -->
+<pre class="r"><code>length(a)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
+<pre><code>[1] 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yIChpIGluIDE6bGVuZ3RoKGEpKXtcbiAgY2F0KHBhc3RlKGFbaV0sIFwiXFxuXCIpKVxufVxuYGBgIn0= -->
+<pre class="r"><code>for (i in 1:length(a)){
   cat(paste(a[i], &quot;\n&quot;))
-}
-a[1] &lt;- &quot;z&quot;
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYSBcbmIgXG5jIFxuIn0= -->
+<pre><code>a 
+b 
+c </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVsxXSA8LSBcInpcIlxuYVxuYGBgIn0= -->
+<pre class="r"><code>a[1] &lt;- &quot;z&quot;
 a</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwielwiIFwiYlwiIFwiY1wiXG4ifQ== -->
+<pre><code>[1] &quot;z&quot; &quot;b&quot; &quot;c&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -275,6 +327,16 @@ l[[2]] &lt;- 2
 l[[3]] &lt;- &quot;a&quot;
 l</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSAxXG5cbltbMl1dXG5bMV0gMlxuXG5bWzNdXVxuWzFdIFwiYVwiXG4ifQ== -->
+<pre><code>[[1]]
+[1] 1
+
+[[2]]
+[1] 2
+
+[[3]]
+[1] &quot;a&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -282,11 +344,19 @@ l</code></pre>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubDEgPC0gbGlzdChhPVwiRmlyc3RcIiwgYj0yLCBjPVRSVUUpXG5sMVtbMV1dXG5sMVtbJ2EnXV1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubDEgPC0gbGlzdChhPVwiRmlyc3RcIiwgYj0yLCBjPVRSVUUpXG5sMVtbMV1dXG5gYGAifQ== -->
 <pre class="r"><code>l1 &lt;- list(a=&quot;First&quot;, b=2, c=TRUE)
-l1[[1]]
-l1[['a']]</code></pre>
+l1[[1]]</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRmlyc3RcIlxuIn0= -->
+<pre><code>[1] &quot;First&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubDFbWydhJ11dXG5gYGAifQ== -->
+<pre class="r"><code>l1[['a']]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRmlyc3RcIlxuIn0= -->
+<pre><code>[1] &quot;First&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -308,24 +378,170 @@ l1[['a']]</code></pre>
 <p>-like a table with columns and rows -str gives an broad overview of what the data looks like</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShpcmlzKVxuc3RyKGlyaXMpXG5WaWV3KGlyaXMpXG5kaW0oaXJpcylcbmRpbShpcmlzKVsxXVxuaGVhZChpcmlzKVxudGFibGUoaXJpcylcbmlyaXNbLDFdXG5uYW1lcyhpcmlzKVxuaXJpcyRTZXBhbC5MZW5ndGhcbm5hbWVzKGlyaXMpIDwtIGMoXCJhXCIsIFwiYlwiLCBcImNcIiwgXCJkXCIsIFwiZVwiKVxubmFtZXMoaXJpcylcbmlyaXMkYVxuZGF0YShcImlyaXNcIilcbnRhYmxlKGlyaXMkU3BlY2llcylcbnN1bW1hcnkoaXJpcylcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShpcmlzKVxuc3RyKGlyaXMpXG5gYGAifQ== -->
 <pre class="r"><code>data(iris)
-str(iris)
-View(iris)
-dim(iris)
-dim(iris)[1]
-head(iris)
-table(iris)
-iris[,1]
-names(iris)
-iris$Sepal.Length
-names(iris) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;)
-names(iris)
-iris$a
-data(&quot;iris&quot;)
-table(iris$Species)
-summary(iris)</code></pre>
+str(iris)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0MTUwIG9icy4gb2YgIDUgdmFyaWFibGVzOlxuICQgU2VwYWwuTGVuZ3RoOiBudW0gIDUuMSA0LjkgNC43IDQuNiA1IDUuNCA0LjYgNSA0LjQgNC45IC4uLlxuICQgU2VwYWwuV2lkdGggOiBudW0gIDMuNSAzIDMuMiAzLjEgMy42IDMuOSAzLjQgMy40IDIuOSAzLjEgLi4uXG4gJCBQZXRhbC5MZW5ndGg6IG51bSAgMS40IDEuNCAxLjMgMS41IDEuNCAxLjcgMS40IDEuNSAxLjQgMS41IC4uLlxuICQgUGV0YWwuV2lkdGggOiBudW0gIDAuMiAwLjIgMC4yIDAuMiAwLjIgMC40IDAuMyAwLjIgMC4yIDAuMSAuLi5cbiAkIFNwZWNpZXMgICAgIDogRmFjdG9yIHcvIDMgbGV2ZWxzIFwic2V0b3NhXCIsXCJ2ZXJzaWNvbG9yXCIsLi46IDEgMSAxIDEgMSAxIDEgMSAxIDEgLi4uXG4ifQ== -->
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhpcmlzKVxuZGltKGlyaXMpXG5gYGAifQ== -->
+<pre class="r"><code>View(iris)
+dim(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1MCAgIDVcbiJ9 -->
+<pre><code>[1] 150   5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGltKGlyaXMpWzFdXG5gYGAifQ== -->
+<pre class="r"><code>dim(iris)[1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE1MFxuIn0= -->
+<pre><code>[1] 150</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChpcmlzKVxuYGBgIn0= -->
+<pre class="r"><code>head(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6Nn0sInJkZiI6IlVrUllNd3BZQ2dBQUFBTUFCQUFDQUFNRkFBQUFBQVZWVkVZdE9BQUFCQUlBQUFBQkFBUUFDUUFBQUFGNEFBQURFd0FBQUFVQUFBQU9BQUFBQmtBVVptWm1abVptUUJPWm1abVptWnBBRXN6TXpNek16VUFTWm1abVptWm1RQlFBQUFBQUFBQkFGWm1abVptWm1nQUFBQTRBQUFBR1FBd0FBQUFBQUFCQUNBQUFBQUFBQUVBSm1abVptWm1hUUFqTXpNek16TTFBRE16TXpNek16VUFQTXpNek16TXpBQUFBRGdBQUFBWS85bVptWm1abVpqLzJabVptWm1abVAvVE16TXpNek0wLytBQUFBQUFBQUQvMlptWm1abVptUC9zek16TXpNek1BQUFBT0FBQUFCai9KbVptWm1abWFQOG1abVptWm1aby95Wm1abVptWm1qL0ptWm1abVptYVA4bVptWm1abVpvLzJabVptWm1abWdBQUF3MEFBQUFHQUFBQUFRQUFBQUVBQUFBQkFBQUFBUUFBQUFFQUFBQUJBQUFFQWdBQUFBRUFCQUFKQUFBQUJteGxkbVZzY3dBQUFCQUFBQUFEQUFRQUNRQUFBQVp6WlhSdmMyRUFCQUFKQUFBQUNuWmxjbk5wWTI5c2IzSUFCQUFKQUFBQUNYWnBjbWRwYm1sallRQUFCQUlBQUFBQkFBUUFDUUFBQUFWamJHRnpjd0FBQUJBQUFBQUJBQVFBQ1FBQUFBWm1ZV04wYjNJQUFBRCtBQUFFQWdBQUFBRUFCQUFKQUFBQUJXNWhiV1Z6QUFBQUVBQUFBQVVBQkFBSkFBQUFERk5sY0dGc0xreGxibWQwYUFBRUFBa0FBQUFMVTJWd1lXd3VWMmxrZEdnQUJBQUpBQUFBREZCbGRHRnNMa3hsYm1kMGFBQUVBQWtBQUFBTFVHVjBZV3d1VjJsa2RHZ0FCQUFKQUFBQUIxTndaV05wWlhNQUFBUUNBQUFBQVFBRUFBa0FBQUFKY205M0xtNWhiV1Z6QUFBQURRQUFBQUtBQUFBQUFBQUFCZ0FBQkFJQUFBUC9BQUFBRUFBQUFBRUFCQUFKQUFBQUNtUmhkR0V1Wm5KaGJXVUFBQUQrQUFBRUFnQUFBQUVBQkFBSkFBQUFCMjl3ZEdsdmJuTUFBQUlUQUFBQUJRQUFBQkFBQUFBQkFBUUFDUUFBQUFGeUFBQUFFQUFBQUFFQUJBQUpBQUFBRDNWdWJtRnRaV1F0WTJoMWJtc3ROZ0FBQUFvQUFBQUJBQUFBQVFBQUFBMEFBQUFCQUFBQUJnQUFBQTBBQUFBQkFBQUFCUUFBQkFJQUFBVC9BQUFBRUFBQUFBVUFCQUFKQUFBQUJtVnVaMmx1WlFBRUFBa0FBQUFGYkdGaVpXd0FCQUFKQUFBQURuSnZkMjVoYldWekxuQnlhVzUwQUFRQUNRQUFBQXB5YjNkekxuUnZkR0ZzQUFRQUNRQUFBQXBqYjJ4ekxuUnZkR0ZzQUFBQS9nQUFBUDQ9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["fctr"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa","_rn_":"1"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa","_rn_":"2"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa","_rn_":"3"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa","_rn_":"4"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa","_rn_":"5"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUoaXJpcylcbmBgYCJ9 -->
+<pre class="r"><code>table(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiLCAsIFBldGFsLkxlbmd0aCA9IDEsIFBldGFsLldpZHRoID0gMC4xLCBTcGVjaWVzID0gc2V0b3NhXG5cbiAgICAgICAgICAgIFNlcGFsLldpZHRoXG5TZXBhbC5MZW5ndGggMiAyLjIgMi4zIDIuNCAyLjUgMi42IDIuNyAyLjggMi45IDMgMy4xIDMuMiAzLjMgMy40IDMuNSAzLjYgMy43IDMuOCAzLjkgNCA0LjEgNC4yIDQuNFxuICAgICAgICAgNC4zIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDQuNCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA0LjUgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNC42IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDQuNyAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA0LjggMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNC45IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDUgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA1LjEgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNS4yIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDUuMyAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA1LjQgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNS41IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDUuNiAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA1LjcgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNS44IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDUuOSAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA2ICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNi4xIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDYuMiAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA2LjMgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNi40IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDYuNSAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA2LjYgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNi43IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDYuOCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA2LjkgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNyAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDcuMSAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA3LjIgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNy4zIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDcuNCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA3LjYgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNy43IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDcuOSAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG5cbiwgLCBQZXRhbC5MZW5ndGggPSAxLjEsIFBldGFsLldpZHRoID0gMC4xLCBTcGVjaWVzID0gc2V0b3NhXG5cbiAgICAgICAgICAgIFNlcGFsLldpZHRoXG5TZXBhbC5MZW5ndGggMiAyLjIgMi4zIDIuNCAyLjUgMi42IDIuNyAyLjggMi45IDMgMy4xIDMuMiAzLjMgMy40IDMuNSAzLjYgMy43IDMuOCAzLjkgNCA0LjEgNC4yIDQuNFxuICAgICAgICAgNC4zIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAxICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDQuNCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA0LjUgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNC42IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDQuNyAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG4gICAgICAgICA0LjggMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMFxuICAgICAgICAgNC45IDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwIDAgICAwICAgMCAgIDBcbiAgICAgICAgIDUgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAgIDAgICAwICAgMCAwICAgMCAgIDAgICAwXG5cbiBbIHJlYWNoZWQgZ2V0T3B0aW9uKFwibWF4LnByaW50XCIpIC0tIG9taXR0ZWQgMjcgcm93KHMpIGFuZCAyODM2IG1hdHJpeCBzbGljZShzKSBdXG4ifQ== -->
+<pre><code>, , Petal.Length = 1, Petal.Width = 0.1, Species = setosa
+
+            Sepal.Width
+Sepal.Length 2 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4 4.1 4.2 4.4
+         4.3 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.4 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.5 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.6 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.7 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.8 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.9 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5   0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.1 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.2 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.3 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.4 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.5 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.6 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.7 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.8 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5.9 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6   0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.1 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.2 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.3 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.4 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.5 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.6 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.7 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.8 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         6.9 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7   0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.1 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.2 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.3 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.4 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.6 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.7 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         7.9 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+
+, , Petal.Length = 1.1, Petal.Width = 0.1, Species = setosa
+
+            Sepal.Width
+Sepal.Length 2 2.2 2.3 2.4 2.5 2.6 2.7 2.8 2.9 3 3.1 3.2 3.3 3.4 3.5 3.6 3.7 3.8 3.9 4 4.1 4.2 4.4
+         4.3 0   0   0   0   0   0   0   0   0 1   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.4 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.5 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.6 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.7 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.8 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         4.9 0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+         5   0   0   0   0   0   0   0   0   0 0   0   0   0   0   0   0   0   0   0 0   0   0   0
+
+ [ reached getOption(&quot;max.print&quot;) -- omitted 27 row(s) and 2836 matrix slice(s) ]</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpc1ssMV1cbmBgYCJ9 -->
+<pre class="r"><code>iris[,1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBbMV0gNS4xIDQuOSA0LjcgNC42IDUuMCA1LjQgNC42IDUuMCA0LjQgNC45IDUuNCA0LjggNC44IDQuMyA1LjggNS43IDUuNCA1LjEgNS43IDUuMSA1LjQgNS4xIDQuNiA1LjFcbiBbMjVdIDQuOCA1LjAgNS4wIDUuMiA1LjIgNC43IDQuOCA1LjQgNS4yIDUuNSA0LjkgNS4wIDUuNSA0LjkgNC40IDUuMSA1LjAgNC41IDQuNCA1LjAgNS4xIDQuOCA1LjEgNC42XG4gWzQ5XSA1LjMgNS4wIDcuMCA2LjQgNi45IDUuNSA2LjUgNS43IDYuMyA0LjkgNi42IDUuMiA1LjAgNS45IDYuMCA2LjEgNS42IDYuNyA1LjYgNS44IDYuMiA1LjYgNS45IDYuMVxuIFs3M10gNi4zIDYuMSA2LjQgNi42IDYuOCA2LjcgNi4wIDUuNyA1LjUgNS41IDUuOCA2LjAgNS40IDYuMCA2LjcgNi4zIDUuNiA1LjUgNS41IDYuMSA1LjggNS4wIDUuNiA1LjdcbiBbOTddIDUuNyA2LjIgNS4xIDUuNyA2LjMgNS44IDcuMSA2LjMgNi41IDcuNiA0LjkgNy4zIDYuNyA3LjIgNi41IDYuNCA2LjggNS43IDUuOCA2LjQgNi41IDcuNyA3LjcgNi4wXG5bMTIxXSA2LjkgNS42IDcuNyA2LjMgNi43IDcuMiA2LjIgNi4xIDYuNCA3LjIgNy40IDcuOSA2LjQgNi4zIDYuMSA3LjcgNi4zIDYuNCA2LjAgNi45IDYuNyA2LjkgNS44IDYuOFxuWzE0NV0gNi43IDYuNyA2LjMgNi41IDYuMiA1LjlcbiJ9 -->
+<pre><code>  [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1 5.7 5.1 5.4 5.1 4.6 5.1
+ [25] 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6
+ [49] 5.3 5.0 7.0 6.4 6.9 5.5 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+ [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5 5.5 6.1 5.8 5.0 5.6 5.7
+ [97] 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0
+[121] 6.9 5.6 7.7 6.3 6.7 7.2 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+[145] 6.7 6.7 6.3 6.5 6.2 5.9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoaXJpcylcbmBgYCJ9 -->
+<pre class="r"><code>names(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU2VwYWwuTGVuZ3RoXCIgXCJTZXBhbC5XaWR0aFwiICBcIlBldGFsLkxlbmd0aFwiIFwiUGV0YWwuV2lkdGhcIiAgXCJTcGVjaWVzXCIgICAgIFxuIn0= -->
+<pre><code>[1] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot;  &quot;Petal.Length&quot; &quot;Petal.Width&quot;  &quot;Species&quot;     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpcyRTZXBhbC5MZW5ndGhcbmBgYCJ9 -->
+<pre class="r"><code>iris$Sepal.Length</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBbMV0gNS4xIDQuOSA0LjcgNC42IDUuMCA1LjQgNC42IDUuMCA0LjQgNC45IDUuNCA0LjggNC44IDQuMyA1LjggNS43IDUuNCA1LjEgNS43IDUuMSA1LjQgNS4xIDQuNiA1LjFcbiBbMjVdIDQuOCA1LjAgNS4wIDUuMiA1LjIgNC43IDQuOCA1LjQgNS4yIDUuNSA0LjkgNS4wIDUuNSA0LjkgNC40IDUuMSA1LjAgNC41IDQuNCA1LjAgNS4xIDQuOCA1LjEgNC42XG4gWzQ5XSA1LjMgNS4wIDcuMCA2LjQgNi45IDUuNSA2LjUgNS43IDYuMyA0LjkgNi42IDUuMiA1LjAgNS45IDYuMCA2LjEgNS42IDYuNyA1LjYgNS44IDYuMiA1LjYgNS45IDYuMVxuIFs3M10gNi4zIDYuMSA2LjQgNi42IDYuOCA2LjcgNi4wIDUuNyA1LjUgNS41IDUuOCA2LjAgNS40IDYuMCA2LjcgNi4zIDUuNiA1LjUgNS41IDYuMSA1LjggNS4wIDUuNiA1LjdcbiBbOTddIDUuNyA2LjIgNS4xIDUuNyA2LjMgNS44IDcuMSA2LjMgNi41IDcuNiA0LjkgNy4zIDYuNyA3LjIgNi41IDYuNCA2LjggNS43IDUuOCA2LjQgNi41IDcuNyA3LjcgNi4wXG5bMTIxXSA2LjkgNS42IDcuNyA2LjMgNi43IDcuMiA2LjIgNi4xIDYuNCA3LjIgNy40IDcuOSA2LjQgNi4zIDYuMSA3LjcgNi4zIDYuNCA2LjAgNi45IDYuNyA2LjkgNS44IDYuOFxuWzE0NV0gNi43IDYuNyA2LjMgNi41IDYuMiA1LjlcbiJ9 -->
+<pre><code>  [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1 5.7 5.1 5.4 5.1 4.6 5.1
+ [25] 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6
+ [49] 5.3 5.0 7.0 6.4 6.9 5.5 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+ [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5 5.5 6.1 5.8 5.0 5.6 5.7
+ [97] 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0
+[121] 6.9 5.6 7.7 6.3 6.7 7.2 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+[145] 6.7 6.7 6.3 6.5 6.2 5.9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoaXJpcykgPC0gYyhcImFcIiwgXCJiXCIsIFwiY1wiLCBcImRcIiwgXCJlXCIpXG5uYW1lcyhpcmlzKVxuYGBgIn0= -->
+<pre class="r"><code>names(iris) &lt;- c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;)
+names(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYVwiIFwiYlwiIFwiY1wiIFwiZFwiIFwiZVwiXG4ifQ== -->
+<pre><code>[1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXJpcyRhXG5gYGAifQ== -->
+<pre class="r"><code>iris$a</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBbMV0gNS4xIDQuOSA0LjcgNC42IDUuMCA1LjQgNC42IDUuMCA0LjQgNC45IDUuNCA0LjggNC44IDQuMyA1LjggNS43IDUuNCA1LjEgNS43IDUuMSA1LjQgNS4xIDQuNiA1LjFcbiBbMjVdIDQuOCA1LjAgNS4wIDUuMiA1LjIgNC43IDQuOCA1LjQgNS4yIDUuNSA0LjkgNS4wIDUuNSA0LjkgNC40IDUuMSA1LjAgNC41IDQuNCA1LjAgNS4xIDQuOCA1LjEgNC42XG4gWzQ5XSA1LjMgNS4wIDcuMCA2LjQgNi45IDUuNSA2LjUgNS43IDYuMyA0LjkgNi42IDUuMiA1LjAgNS45IDYuMCA2LjEgNS42IDYuNyA1LjYgNS44IDYuMiA1LjYgNS45IDYuMVxuIFs3M10gNi4zIDYuMSA2LjQgNi42IDYuOCA2LjcgNi4wIDUuNyA1LjUgNS41IDUuOCA2LjAgNS40IDYuMCA2LjcgNi4zIDUuNiA1LjUgNS41IDYuMSA1LjggNS4wIDUuNiA1LjdcbiBbOTddIDUuNyA2LjIgNS4xIDUuNyA2LjMgNS44IDcuMSA2LjMgNi41IDcuNiA0LjkgNy4zIDYuNyA3LjIgNi41IDYuNCA2LjggNS43IDUuOCA2LjQgNi41IDcuNyA3LjcgNi4wXG5bMTIxXSA2LjkgNS42IDcuNyA2LjMgNi43IDcuMiA2LjIgNi4xIDYuNCA3LjIgNy40IDcuOSA2LjQgNi4zIDYuMSA3LjcgNi4zIDYuNCA2LjAgNi45IDYuNyA2LjkgNS44IDYuOFxuWzE0NV0gNi43IDYuNyA2LjMgNi41IDYuMiA1LjlcbiJ9 -->
+<pre><code>  [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1 5.7 5.1 5.4 5.1 4.6 5.1
+ [25] 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6
+ [49] 5.3 5.0 7.0 6.4 6.9 5.5 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1
+ [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5 5.5 6.1 5.8 5.0 5.6 5.7
+ [97] 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0
+[121] 6.9 5.6 7.7 6.3 6.7 7.2 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
+[145] 6.7 6.7 6.3 6.5 6.2 5.9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShcImlyaXNcIilcbnRhYmxlKGlyaXMkU3BlY2llcylcbmBgYCJ9 -->
+<pre class="r"><code>data(&quot;iris&quot;)
+table(iris$Species)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gICAgc2V0b3NhIHZlcnNpY29sb3IgIHZpcmdpbmljYSBcbiAgICAgICAgNTAgICAgICAgICA1MCAgICAgICAgIDUwIFxuIn0= -->
+<pre><code>
+    setosa versicolor  virginica 
+        50         50         50 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShpcmlzKVxuYGBgIn0= -->
+<pre class="r"><code>summary(iris)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBTZXBhbC5MZW5ndGggICAgU2VwYWwuV2lkdGggICAgIFBldGFsLkxlbmd0aCAgICBQZXRhbC5XaWR0aCAgICAgICAgICBTcGVjaWVzICBcbiBNaW4uICAgOjQuMzAwICAgTWluLiAgIDoyLjAwMCAgIE1pbi4gICA6MS4wMDAgICBNaW4uICAgOjAuMTAwICAgc2V0b3NhICAgIDo1MCAgXG4gMXN0IFF1Ljo1LjEwMCAgIDFzdCBRdS46Mi44MDAgICAxc3QgUXUuOjEuNjAwICAgMXN0IFF1LjowLjMwMCAgIHZlcnNpY29sb3I6NTAgIFxuIE1lZGlhbiA6NS44MDAgICBNZWRpYW4gOjMuMDAwICAgTWVkaWFuIDo0LjM1MCAgIE1lZGlhbiA6MS4zMDAgICB2aXJnaW5pY2EgOjUwICBcbiBNZWFuICAgOjUuODQzICAgTWVhbiAgIDozLjA1NyAgIE1lYW4gICA6My43NTggICBNZWFuICAgOjEuMTk5ICAgICAgICAgICAgICAgICAgXG4gM3JkIFF1Ljo2LjQwMCAgIDNyZCBRdS46My4zMDAgICAzcmQgUXUuOjUuMTAwICAgM3JkIFF1LjoxLjgwMCAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6Ny45MDAgICBNYXguICAgOjQuNDAwICAgTWF4LiAgIDo2LjkwMCAgIE1heC4gICA6Mi41MDAgICAgICAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500                  </code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -334,9 +550,8 @@ summary(iris)</code></pre>
 <p>-save the sample iris data to my directory called my_iris</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGUudGFibGUoaXJpcywgZmlsZSA9IFwibXlfaXJpcy50c3ZcIiwgcXVvdGUgPSBGLCByb3cubmFtZXMgPSBGLCBzZXAgPSBcIlxcdFwiKVxuXG5gYGAifQ== -->
-<pre class="r"><code>write.table(iris, file = &quot;my_iris.tsv&quot;, quote = F, row.names = F, sep = &quot;\t&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGUudGFibGUoaXJpcywgZmlsZSA9IFwibXlfaXJpcy50c3ZcIiwgcXVvdGUgPSBGLCByb3cubmFtZXMgPSBGLCBzZXAgPSBcIlxcdFwiKVxuYGBgIn0= -->
+<pre class="r"><code>write.table(iris, file = &quot;my_iris.tsv&quot;, quote = F, row.names = F, sep = &quot;\t&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -361,21 +576,12 @@ View(my_iris)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
-</div>
-<div id="ploting-in-r" class="section level2">
-<h2>Ploting in R</h2>
-<p>-the most common ploting function in base R is plot</p>
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChteV9pcmlzJFNlcGFsLkxlbmd0aCwgbXlfaXJpcyRTZXBhbC5XaWR0aCwgeGxhYiA9IFwiU2VwYWwgTGVuZ3RoXCIsIHlsYWIgPSBcIlNlcGFsIFdpZHRoXCIsIG1haW4gPSBcIk15IEdyZWF0IFBsb3RcIilcbmBgYCJ9 -->
-<pre class="r"><code>plot(my_iris$Sepal.Length, my_iris$Sepal.Width, xlab = &quot;Sepal Length&quot;, ylab = &quot;Sepal Width&quot;, main = &quot;My Great Plot&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
+</div>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKYXV0aG9yOiAiTWVnaGFuIE1vb2R5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIFIgYXMgYSBQcm9ncmFtbWluZyBMYW5ndWFnZSAKCiMjIERhdGEgVHlwZXM6IAoKIyMjIFZlY3RvcnMgCi0geW91IGNhbiBub3QgbWl4IGFuZCBtYXRjaCBkYXRhIHR5cGVzIGluIHZlY3RvcnMKYGBge3J9CmEgPC0gYygxLDIsMykKYTEgPC0gYygxLjAsIDIuMCwgMy4wKQpiIDwtIGMoImEiLCAiYiIsICJjIikKYyA8LSBjKFRSVUUsIEZBTFNFLCBUUlVFKQpkIDwtIGMoMSwgImEiLCBUUlVFKQpjbGFzcyhhKQpjbGFzcyhhMSkKY2xhc3MoYikKY2xhc3MoYykKY2xhc3MoZCkKZAoKeCA8LSAyCmFzLmNoYXJhY3Rlcih4KQoKZiA8LSBhcy5mYWN0b3IoYygpKQoKYGBgCmBgYHtyfQphIDwtIGMoJ2EnLCAnYicsICdjJykKYVsxOjJdCmxlbmd0aChhKQpmb3IgKGkgaW4gMTpsZW5ndGgoYSkpewogIGNhdChwYXN0ZShhW2ldLCAiXG4iKSkKfQphWzFdIDwtICJ6IgphCmBgYAojIyNMaXN0cyAKLSBjYW4gaGF2ZSBhIG1peG1hdGNoIG9mIGRhdGEgdHlwZXMgYW5kIGNhbiBoYXZlIG5leHRlZCBsaXN0IApgYGB7cn0KbCA8LSBsaXN0KCkKbFtbMV1dIDwtIDEKbFtbMl1dIDwtIDIgCmxbWzNdXSA8LSAiYSIKbApgYGAKLSBoYXNoIHN0cnVjdHVyZSBvZiBsaXN0IApgYGB7cn0KbDEgPC0gbGlzdChhPSJGaXJzdCIsIGI9MiwgYz1UUlVFKQpsMVtbMV1dCmwxW1snYSddXQpgYGAKLSBOQSBoYXMgYSBzcGVjaWZpYyBtZWFuaW5nIHRoYXQgdGhlcmUgaXMgbm90aGluZyB0aGVyZSBsaWtlIE5VTEwKCmBgYHtyfQpuYV92IDwtIGMoMSwyLE5BLDMpCmBgYAoKIyNEYXRhIFN0cnVjdHVyZXM6CiMjI0RhdGEgRnJhbWVzCgotbGlrZSBhIHRhYmxlIHdpdGggY29sdW1ucyBhbmQgcm93cyAKLXN0ciBnaXZlcyBhbiBicm9hZCBvdmVydmlldyBvZiB3aGF0IHRoZSBkYXRhIGxvb2tzIGxpa2UKYGBge3J9CmRhdGEoaXJpcykKc3RyKGlyaXMpClZpZXcoaXJpcykKZGltKGlyaXMpCmRpbShpcmlzKVsxXQpoZWFkKGlyaXMpCnRhYmxlKGlyaXMpCmlyaXNbLDFdCm5hbWVzKGlyaXMpCmlyaXMkU2VwYWwuTGVuZ3RoCm5hbWVzKGlyaXMpIDwtIGMoImEiLCAiYiIsICJjIiwgImQiLCAiZSIpCm5hbWVzKGlyaXMpCmlyaXMkYQpkYXRhKCJpcmlzIikKdGFibGUoaXJpcyRTcGVjaWVzKQpzdW1tYXJ5KGlyaXMpCmBgYAojIyMgQ1ZTIGFuZCBUU1YgZmlsZXMKCi1zYXZlIHRoZSBzYW1wbGUgaXJpcyBkYXRhIHRvIG15IGRpcmVjdG9yeSBjYWxsZWQgbXlfaXJpcwpgYGB7cn0Kd3JpdGUudGFibGUoaXJpcywgZmlsZSA9ICJteV9pcmlzLnRzdiIsIHF1b3RlID0gRiwgcm93Lm5hbWVzID0gRiwgc2VwID0gIlx0IikKCmBgYAoKYGBge3J9Cm15X2lyaXMgPC0gcmVhZC50YWJsZSgibXlfaXJpcy50c3YiKQpuYW1lcyhteV9pcmlzKSA8LSBteV9pcmlzWzEsIF0KbXlfaXJpcyA8LSBteV9pcmlzWy0xLCBdClZpZXcobXlfaXJpcykKYGBgCi0gVGhlIGFib3ZlIGJsYWNrIGNhbiBiZSBzaW1wbGllZCBkb3duIHRvIApgYGB7cn0KbXlfaXJpcyA8LSByZWFkLnRhYmxlKCJteV9pcmlzLnRzdiIpClZpZXcobXlfaXJpcykKYGBgCgojIyBQbG90aW5nIGluIFIgCgotdGhlIG1vc3QgY29tbW9uIHBsb3RpbmcgZnVuY3Rpb24gaW4gYmFzZSBSIGlzIHBsb3QgCgpgYGB7cn0KcGxvdChteV9pcmlzJFNlcGFsLkxlbmd0aCwgbXlfaXJpcyRTZXBhbC5XaWR0aCwgeGxhYiA9ICJTZXBhbCBMZW5ndGgiLCB5bGFiID0gIlNlcGFsIFdpZHRoIiwgbWFpbiA9ICJNeSBHcmVhdCBQbG90IikKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKYXV0aG9yOiAiTWVnaGFuIE1vb2R5IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIFIgYXMgYSBQcm9ncmFtbWluZyBMYW5ndWFnZSAKCiMjIERhdGEgVHlwZXM6IAoKIyMjIFZlY3RvcnMgCi0geW91IGNhbiBub3QgbWl4IGFuZCBtYXRjaCBkYXRhIHR5cGVzIGluIHZlY3RvcnMKYGBge3J9CmEgPC0gYygxLDIsMykKYTEgPC0gYygxLjAsIDIuMCwgMy4wKQpiIDwtIGMoImEiLCAiYiIsICJjIikKYyA8LSBjKFRSVUUsIEZBTFNFLCBUUlVFKQpkIDwtIGMoMSwgImEiLCBUUlVFKQpjbGFzcyhhKQpjbGFzcyhhMSkKY2xhc3MoYikKY2xhc3MoYykKY2xhc3MoZCkKZAoKeCA8LSAyCmFzLmNoYXJhY3Rlcih4KQoKZiA8LSBhcy5mYWN0b3IoYygpKQoKYGBgCmBgYHtyfQphIDwtIGMoJ2EnLCAnYicsICdjJykKYVsxOjJdCmxlbmd0aChhKQpmb3IgKGkgaW4gMTpsZW5ndGgoYSkpewogIGNhdChwYXN0ZShhW2ldLCAiXG4iKSkKfQphWzFdIDwtICJ6IgphCmBgYAojIyNMaXN0cyAKLSBjYW4gaGF2ZSBhIG1peG1hdGNoIG9mIGRhdGEgdHlwZXMgYW5kIGNhbiBoYXZlIG5leHRlZCBsaXN0IApgYGB7cn0KbCA8LSBsaXN0KCkKbFtbMV1dIDwtIDEKbFtbMl1dIDwtIDIgCmxbWzNdXSA8LSAiYSIKbApgYGAKLSBoYXNoIHN0cnVjdHVyZSBvZiBsaXN0IApgYGB7cn0KbDEgPC0gbGlzdChhPSJGaXJzdCIsIGI9MiwgYz1UUlVFKQpsMVtbMV1dCmwxW1snYSddXQpgYGAKLSBOQSBoYXMgYSBzcGVjaWZpYyBtZWFuaW5nIHRoYXQgdGhlcmUgaXMgbm90aGluZyB0aGVyZSBsaWtlIE5VTEwKCmBgYHtyfQpuYV92IDwtIGMoMSwyLE5BLDMpCmBgYAoKIyNEYXRhIFN0cnVjdHVyZXM6CiMjI0RhdGEgRnJhbWVzCgotbGlrZSBhIHRhYmxlIHdpdGggY29sdW1ucyBhbmQgcm93cyAKLXN0ciBnaXZlcyBhbiBicm9hZCBvdmVydmlldyBvZiB3aGF0IHRoZSBkYXRhIGxvb2tzIGxpa2UKYGBge3J9CmRhdGEoaXJpcykKc3RyKGlyaXMpClZpZXcoaXJpcykKZGltKGlyaXMpCmRpbShpcmlzKVsxXQpoZWFkKGlyaXMpCnRhYmxlKGlyaXMpCmlyaXNbLDFdCm5hbWVzKGlyaXMpCmlyaXMkU2VwYWwuTGVuZ3RoCm5hbWVzKGlyaXMpIDwtIGMoImEiLCAiYiIsICJjIiwgImQiLCAiZSIpCm5hbWVzKGlyaXMpCmlyaXMkYQpkYXRhKCJpcmlzIikKdGFibGUoaXJpcyRTcGVjaWVzKQpzdW1tYXJ5KGlyaXMpCmBgYAojIyMgQ1ZTIGFuZCBUU1YgZmlsZXMKCi1zYXZlIHRoZSBzYW1wbGUgaXJpcyBkYXRhIHRvIG15IGRpcmVjdG9yeSBjYWxsZWQgbXlfaXJpcwpgYGB7cn0Kd3JpdGUudGFibGUoaXJpcywgZmlsZSA9ICJteV9pcmlzLnRzdiIsIHF1b3RlID0gRiwgcm93Lm5hbWVzID0gRiwgc2VwID0gIlx0IikKCmBgYAoKYGBge3J9Cm15X2lyaXMgPC0gcmVhZC50YWJsZSgibXlfaXJpcy50c3YiKQpuYW1lcyhteV9pcmlzKSA8LSBteV9pcmlzWzEsIF0KbXlfaXJpcyA8LSBteV9pcmlzWy0xLCBdClZpZXcobXlfaXJpcykKYGBgCi0gVGhlIGFib3ZlIGJsYWNrIGNhbiBiZSBzaW1wbGllZCBkb3duIHRvIApgYGB7cn0KbXlfaXJpcyA8LSByZWFkLnRhYmxlKCJteV9pcmlzLnRzdiIpClZpZXcobXlfaXJpcykKYGBgCgoKCgoKCgoKCgogCg==</div>
 
 
 

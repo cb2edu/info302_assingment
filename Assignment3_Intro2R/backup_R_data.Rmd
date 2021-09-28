@@ -103,17 +103,13 @@ my_iris <- read.table("my_iris.tsv")
 View(my_iris)
 ```
 
-## Ploting in R 
 
--the most common ploting function in base R is plot 
 
-```{r}
-plot(my_iris$Sepal.Length, my_iris$Sepal.Width, xlab = "Sepal Length", ylab = "Sepal Width", main = "My Great Plot")
-```
 
-- ggplot is the popular version to use now 
-```{r}
-library(ggplot2)
-ggplot(my_iris, aes(x=Sepal.Length, y=Sepal.Width)) + geom_point() + xlab("Sepal Length") + ylab("Sepal Width")
-```
 
+
+
+
+
+
+ 

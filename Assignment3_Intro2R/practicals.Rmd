@@ -149,32 +149,43 @@ Read it in to R using read.table() and store it as the variable `iris`, keeping 
  1. all the columns have column names 
  2. Display the contents of proj_summary in your console
 ```{r}
-iris <- read.table("my_iris.tsv")
-iris
+data(iris)
+str(iris)
+View(iris)
+dim(iris)
+dim(iris)[1]
+head(iris)
+table(iris)
+iris[,1]
+names(iris)
+
 ```
 
 Use the class() function on `Species` and `Petal.length`, how does the output differ between the two?
 ```{r}
+iris$Sepal.Length
+iris$Species
 
 ```
 
 Use the summary() function on the `iris` dataframe, what is median length for each of the `numeric` column?
 ```{r}
-
+summary(iris)
 ```
 
 How long is the Species factor?
 ```{r}
-
+dim(iris)[1]
 ```
 
 What are the dimensions of the iris dataframe?
 ```{r}
-
+dim(iris)
 ```
 
 How many elements in (how long is) the output of colnames(iris)? Don’t count, but use another function to determine this.
 ```{r}
+names(iris)
 
 ```
 

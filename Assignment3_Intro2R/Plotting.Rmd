@@ -1,0 +1,82 @@
+---
+title: "Ploting in R"
+author: "Meghan Moody"
+date: "September 28, 2021 "
+output: html_notebook
+---
+
+# Ploting in R 
+
+-the most common ploting function in base R is plot 
+
+```{r}
+names(my_iris)
+plot(my_iris$Sepal.Length, my_iris$Sepal.Width, xlab = "Sepal Length", ylab = "Sepal Width", main = "My Great Plot")
+```
+
+- ggplot is the popular version to use now 
+
+```{r}
+library(ggplot2)
+ggplot(my_iris, aes(x=Sepal.Length, y=Sepal.Width)) + geom_point() + xlab("Sepal Length") + ylab("Sepal Width")
+```
+## Histograms
+
+
+```{r}
+data <- runif(1000)
+hist(data)
+hist(data+data+data+data+data+data)
+
+```
+
+- Calculating Z scores 
+
+```{r}
+mean(data)
+sd(data)
+(2-mean(data))/sd(data)
+```
+
+## Box Plot 
+
+```{r}
+boxplot(airquality)
+g <- ggplot(airquality, aes(x=as.factor(Month), y=Ozone))+geom_boxplot()
+g
+
+```
+
+
+```{r}
+library(tidyr)
+gather_data <- gather(airquality)
+g <- ggplot(gather_data, aes(x=key, y=value)) + geom_boxplot()
+g
+```
+## Linear Regression and Correlation
+
+
+- Create a random distribution with mean 2 and standard devation of 1 for thought experiment that a man catches a fish everyday for a year and on avgerage catches a fish between 1 and 3 feet. What is the probability of catching a fish that is 5 feet long 
+
+```{r}
+fish_data <- rnorm(n=365, mean=2, sd =1)
+hist(fish_data)
+
+z_score <- (5-mean(fish_data))/sd(fish_data)
+z_score
+
+
+probability <- 1- pnorm(z_score)
+probability
+
+```
+
+## Data Minning
+
+- you give a set of data and then create a model of that data and then given a particualr point what would be the features of that particular point 
+
+- Linear Regression is a function in the form y=mx+b and fits a linar line though the data with the same amout of data points above and below the line 
+
+- Gradient Descent
+
