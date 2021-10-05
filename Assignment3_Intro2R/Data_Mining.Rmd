@@ -1,0 +1,141 @@
+---
+title: "Data Mining"
+author: "Meghan Moody"
+output: html_notebook
+---
+
+## Linear Regression and Correlation
+
+- linear regression is a linear approach for modelling the relationship between a scalar response and one or more explanatory variables
+
+- follows the formula y=mx+b
+
+- an Optimization function can be used for find the value of Y, denoted as $\overline{y}$
+
+
+- Create a random distribution with mean 2 and standard devation of 1 for thought experiment that a man catches a fish everyday for a year and on avgerage catches a fish between 1 and 3 feet. What is the probability of catching a fish that is 5 feet long 
+
+```{r}
+fish_data <- rnorm(n=365, mean=2, sd =1)
+hist(fish_data)
+
+z_score <- (5-mean(fish_data))/sd(fish_data)
+z_score
+
+
+probability <- 1- pnorm(z_score)
+probability
+
+```
+
+
+## Data Minning
+
+- you give a set of data and then create a model of that data and then given a particualr point what would be the features of that particular point 
+
+- Linear Regression is a function in the form $y=mx+b$ and fits a linar line though the data with the same amout of data points above and below the line 
+
+- An Optimization function can be used to find Y, and is denoted as Y bar, $\overline{y}$
+
+
+$\sum_{n=1}^{i} (y-\overline{y})^2$
+
+
+
+- Gradient Descent:  an optimization algorithm that's used when training a machine learning model. It's based on a convex function and tweaks its parameters iteratively to minimize a given function to its local minimum.
+
+- The regression line is sometimes called the "line of best fit" because it is the line that fits best when drawn through the points. It is a line that minimizes the distance of the actual scores from the predicted scores.
+
+- Pearson Correlation: is the ratio between the covariance of two variables and the product of their standard deviations; thus it is essentially a normalised measurement of the covariance, such that the result always has a value between −1 and 1. 
+
+- As with covariance itself, the measure can only reflect a linear correlation of variables, and ignores      many other types of relationship or correlation. 
+
+- As a simple example, one would expect the age and height of a sample of teenagers from a high school to have a Pearson correlation coefficient significantly greater than 0, but less than 1 (as 1 would represent an unrealistically perfect correlation).
+
+- Spearman Correlation: a nonparametric measure of rank correlation (statistical dependence between the rankings of two variables). It assesses how well the relationship between two variables can be described using a monotonic function.
+
+- Spearman's correlation assesses monotonic relationships (whether linear or not). If there are no repeated data values, a perfect Spearman correlation of +1 or −1 occurs when each of the variables is a perfect monotone function of the other.
+
+- R-squared $R^{2}$ is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
+
+### Linear Regression Example
+
+```{r}
+data("iris")
+View(iris)
+
+m <- lm(formula = iris$Sepal.Width~iris$Sepal.Length)
+summary(m)
+
+```
+
+- can not trust reguression becuase p-value (Pr(>|t|)) is greater than 0.05 
+
+
+```{r}
+{plot(iris$Sepal.Length, iris$Sepal.Width, col=iris$Species)
+  abline(m)}
+
+```
+
+```{r}
+s <- summary(m)
+str(s)
+s$adj.r.squared
+s$coefficients[2,4]
+
+```
+
+```{r}
+str(iris)
+split_iris <- split(iris, f= iris$Species)
+str(split_iris)
+class(split_iris)
+split_iris[["setosa"]]
+```
+
+
+
+
+```{r}
+for (i in 1:length(split_iris)){
+  df <- split_iris[[i]]
+  m <- lm(df$Sepal.Width~df$Sepal.Length)
+  cat(paste(names(split_iris)[i],summary(m)$adj.r.squared, "\n"))
+}
+```
+
+
+
+```{r}
+result <- lapply(split_iris, FUN = function(x){
+  m <- lm(x$Sepal.Width~x$Sepal.Length)
+  return(summary(m)$adj.r.squared)
+})
+result 
+result_dataframe <- do.call(rbind, result)
+result_dataframe
+```
+
+
+
+### Correlation 
+
+```{r}
+cor_resutl <- cor.test(iris$Sepal.Length, iris$Sepal.Width, method = "pearson", alternative = "two.sided")
+cor_resutl
+
+cor_resutl$p.value
+
+cor_resutl$estimate
+(cor_resutl$estimate)^2
+```
+
+
+
+
+
+
+
+
+

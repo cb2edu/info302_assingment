@@ -185,7 +185,8 @@ dim(iris)
 
 How many elements in (how long is) the output of colnames(iris)? Don’t count, but use another function to determine this.
 ```{r}
-names(iris)
+names <- colnames(iris)
+length(names)
 
 ```
 
@@ -193,37 +194,44 @@ names(iris)
 
 Extract only those elements  `Sepal.Length` that are not `setosa`.
 ```{r}
+iris[iris$Species != "setosa", "Sepal.Length"]
+
 
 ```
 
 Return the `Sepal.Length` and `Petal.Length` columns for `setosa` and `versicolor`.
 ```{r}
-
+iris[iris$Species == "setosa "|iris$Species == "versicolor", c("Sepal.Length", "Petal.Length")]
 ```
 
 Return the fourth and ninth values of the `Petal.Length` column of the `iris` dataframe.
 ```{r}
+iris["4", "Petal.Length"]
+iris["9", "Petal.Length"]
 
 ```
 
 Extract the `Petal.Length`  column as a data frame.
 ```{r}
-
+iris$Petal.Length
 ```
 
 Subset the `iris` dataframe to return only the rows of data with a species is `setosa`.
 ```{r}
-
+iris[iris$Species == "setosa",]
 ```
 
 
 Create a list named `random` with the each element being the `Petal.Length` for each species of the `iris` dataframe.
 ```{r}
+random <- iris[,"Petal.Length"]
 
 ```
 
 Extract the first component from the list.
 ```{r}
+random[1]
+random[1:15]
 
 ```
 
@@ -293,7 +301,6 @@ Write the `new_iris` data set to a `.tsv` file.
 ```{r}
 
 ```
-
 
 
 
