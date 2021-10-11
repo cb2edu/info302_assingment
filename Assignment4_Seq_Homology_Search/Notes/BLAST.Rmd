@@ -1,0 +1,77 @@
+---
+title: "Basic Local Alignment Search Tool(BLAST)"
+author: "Meghan Moody"
+date: "OCtober 5, 2021"
+output: html_notebook
+---
+
+## BLAST- basic localf alignment search tool
+
+- blastp: protien
+
+- blastn: DNA
+
+- searching for a sequence (DNA/amino acid) against a data base 
+
+- Algorithim uses Dynamic Programming 
+
+- Multiple High Scoring Pairs can come from one query sequene 
+
+> E-value: $\ E\approx\ 1-e ^{-p(S \ge x)D}$ 
+
+-  x = a score cut off
+
+- D = database size
+
+- p = P-value
+
+#### BLOSUM62
+
+- A Blocks Substitution Matrix is a substitution scoring matrix in which scores for each position are derived from observations of the frequencies of substitutions in blocks of local alignments in related proteins.
+
+- Each matrix is tailored to a particular evolutionary distance. 
+
+- In the BLOSUM62 matrix, for example, the alignment from which scores were derived was created using sequences sharing no more than 62% identity.
+
+- Sequences more identical than 62% are represented by a single sequence in the alignment so as to avoid over-weighting closely related family members.
+
+- PQG and PQG score: p-p = 7 q-q=5 g-g=6 : 7+5+6 = 18
+
+### Download Blast 
+
+ftp://ftp.ncbi.nih.gov/blast/executables/release/2.2.25/
+
+### PSSM
+- profile can be created by Postiton specific scoring matrix (PSSM) or 
+
+- A PSSM is based on the frequencies of feach reside in a specific position of a multiple alignment and you end up with a frequency matrix but it can not capture uncertantity so you have to add one 
+
+- for A in position 1 =  $\log((0+1)/(5+20))/0.05) = -0.2$ this number is sometimes called LOD score
+
+- for a random amino acid qi = $\frac{1}{20} = 0.05$
+
+- rpsblast can be used to search a PSSM, but PSSM has problem in that it can not handle gaps in the sequence and it also does the scoring of the entire alignment, and can not detect partial match 
+
+- to solve this Markov Model was create used a Markoc Process 
+
+### Markov Model 
+
+- Markov chains are memory less: probability of a state depends only on the previous state 
+
+$\ x_{1} -> x_{2} -> x_{3} -> x_{4} -> x_{5}$
+
+$\ p(x_{1},x_{2},x_{3}, \cdots) = p(x_{1})p(x_{2}|x_{1})p(x_{3}|x_{2})\cdots$
+
+- Markov chains are defines as a state diagram 
+
+- A Markov chain is defined by : a set of finite states, a set of transitional probabilities, and an initial state probability distribution 
+
+```{r}
+
+xtable(x, caption = NULL, label = HI , align = NULL, digits = NULL,
+       display = NULL, auto = FALSE, ...)
+```
+
+
+
+

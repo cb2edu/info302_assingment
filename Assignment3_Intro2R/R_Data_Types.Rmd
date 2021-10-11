@@ -1,5 +1,5 @@
 ---
-title: "INFO302_classnotes 9/16"
+title: "INFO302_classnotes R Data Types"
 author: "Meghan Moody"
 date: "9/16/2021"
 output: html_document
@@ -49,8 +49,6 @@ l[[1]] <- 1
 l[[2]] <- 2 
 l[[3]] <- "a"
 l
-
-
 ```
 - hash structure of list 
 ```{r}
@@ -68,10 +66,64 @@ na_v <- c(1,2,NA,3)
 ###Data Frames
 
 -like a table with columns and rows 
-
+-str gives an broad overview of what the data looks like
 ```{r}
+data(iris)
+str(iris)
+View(iris)
+dim(iris)
+dim(iris)[1]
+head(iris)
+table(iris)
+iris[,1]
+names(iris)
+iris$Sepal.Length
+names(iris) <- c("a", "b", "c", "d", "e")
+names(iris)
+iris$a
+data("iris")
+table(iris$Species)
+summary(iris)
+```
+### CVS and TSV files
+
+-save the sample iris data to my directory called my_iris
+```{r}
+write.table(iris, file = "my_iris.tsv", quote = F, row.names = F, sep = "\t")
 
 ```
+
+```{r}
+my_iris <- read.table("my_iris.tsv")
+names(my_iris) <- my_iris[1, ]
+my_iris <- my_iris[-1, ]
+View(my_iris)
+```
+- The above black can be simplied down to 
+```{r}
+my_iris <- read.table("my_iris.tsv")
+View(my_iris)
+```
+
+
+## Ploting in R 
+
+-the most common ploting function in base R is plot 
+
+```{r}
+plot(my_iris$Sepal.Length, my_iris$Sepal.Width, xlab = "Sepal Length", ylab = "Sepal Width", main = "My Great Plot")
+```
+- ggplot is the popular version to use now 
+```{r}
+library(ggplot2)
+ggplot(my_iris, aes(x=Sepal.Length, y=Sepal.Width)) + geom_point() + xlab("Sepal Length") + ylab("Sepal Width")
+```
+
+
+
+
+
+
 
 
 
