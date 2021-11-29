@@ -1,0 +1,26 @@
+---
+title: "Problem 1"
+author: "Meghan Moody"
+
+output: html_notebook
+---
+
+- Download PFAM domain distribution for human proteome 
+
+```{r engine='bash'}
+wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/proteomes/9606.tsv.gz
+
+
+```
+```{r engine='bash'}
+gzip -d 9606.tsv.gz
+
+
+```
+
+```{r}
+
+```
+
+
+
