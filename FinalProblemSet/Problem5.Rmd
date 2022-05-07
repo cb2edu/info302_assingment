@@ -1,0 +1,27 @@
+---
+title: "Problem 5 of Final set"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+
+Fermi Estimation
+
+How many pizza restaurants are in New York City?
+
+
+To solve this problem I would determine how many restaurants there are in New York. And then based off of how popular a New York pizza is, determine how many of those restaurants may be a pizza place. 
+
+There are probably appoximately 30,000 restarants in all of New York City. Based on that I feel that pizza is a grab and go type of deal when it comes to the city. So there may be some smaller restaurants on the corners of streets and such. There is also a wildly diverse selection of restaurants in most large cities so I would assume that there are several highly compeitive varieties of restaurants within the city. I think then to divide up the types of restaurants being: Chinese, Indian, Italian, Sandwich shops, Burger joints and so on, I would probably divide the number of restaurants by 10 putting that into a possibility of types. This would give you nearly 3,000 restaurants of each type. This you would then have to account that Italian restaurants may serve pizza. So to knock it down and say that this is true we would single out the restaurants that are strictly pizza. For this could still be a high number I would assume that there may a few franchises of pizza places and bring that down to 700 true pizza places in the New York City area. And finally to account for the franchising of some places I would say there may be around 400 pizza places in all of New York City.
